@@ -1,6 +1,6 @@
 {
   "ConnectionStrings": {
-    "AzureSqlConnection": "Server=tcp:seis630-sql.database.windows.net,1433;Initial Catalog=seis630db;Persist Security Info=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Authentication=Active Directory Default;"
+    "AzureSqlConnection": ""
   },
   "Logging": {
     "LogLevel": {

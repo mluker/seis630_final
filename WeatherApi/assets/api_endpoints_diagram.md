@@ -65,7 +65,7 @@ flowchart TB
 | GET    | `/api/reports/average-by-location` | Get average temperatures by location |
 | GET    | `/api/reports/hottest-locations` | Get top 10 hottest locations |
 | GET    | `/api/reports/coldest-locations` | Get top 10 coldest locations |
-| GET    | `/api/reports/temperature-trends` | Get temperature trends over the last 7 days |
+| GET    | `/api/reports/temperature-trends` | Get temperature trends over the last 60 days |
 
 ## HTTP Methods Legend
 

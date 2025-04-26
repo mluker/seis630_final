@@ -138,3 +138,6 @@ scratch.sql
 # c#
 obj
 bin
+
+# settings
+appsettings.*.json
