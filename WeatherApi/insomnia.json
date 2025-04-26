@@ -1,0 +1,586 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-04-11T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_weather_api_root",
+      "parentId": "fld_weather_api",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200",
+      "name": "API Root",
+      "description": "Access the API root endpoint",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1713030000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_weather_api",
+      "parentId": "wrk_weather_api",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "name": "WeatherAPI",
+      "description": "Endpoints for the WeatherAPI application",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1713030000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_weather_api",
+      "parentId": null,
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "name": "WeatherAPI",
+      "description": "SEIS630 Final Project - WeatherAPI",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_weather_api",
+      "parentId": "wrk_weather_api",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:5200",
+        "apiVersion": "1.0"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl",
+          "apiVersion"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1713030000000,
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_report_endpoints",
+      "parentId": "fld_weather_api",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "name": "Report Endpoints",
+      "description": "Weather reporting endpoints",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1713029900000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_report_average_by_location",
+      "parentId": "fld_report_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/reports/average-by-location",
+      "name": "Average Temperature by Location",
+      "description": "Get average temperature data by location",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_report_hottest_locations",
+      "parentId": "fld_report_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/reports/hottest-locations",
+      "name": "Top 10 Hottest Locations",
+      "description": "Get the top 10 hottest locations based on average temperature",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_report_coldest_locations",
+      "parentId": "fld_report_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/reports/coldest-locations",
+      "name": "Top 10 Coldest Locations",
+      "description": "Get the top 10 coldest locations based on average temperature",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_report_temperature_trends",
+      "parentId": "fld_report_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/reports/temperature-trends",
+      "name": "Temperature Trends (Last 7 Days)",
+      "description": "Get temperature trends over the last 7 days",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_report_state_temperature_variations",
+      "parentId": "fld_report_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/reports/state-temperature-variations",
+      "name": "Temperature Variations by State",
+      "description": "Get temperature variations by state",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_weather_endpoints",
+      "parentId": "fld_weather_api",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "name": "Weather Endpoints",
+      "description": "Weather data endpoints",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1713029800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_all_weather",
+      "parentId": "fld_weather_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/weather",
+      "name": "Get All Weather Data",
+      "description": "Get all weather data with full location details",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_weather_by_id",
+      "parentId": "fld_weather_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/weather/1",
+      "name": "Get Weather By ID",
+      "description": "Get weather data by id with full location details",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_weather",
+      "parentId": "fld_weather_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/weather",
+      "name": "Create Weather Data",
+      "description": "Add new weather data with existing location",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"temperature\": 75.5,\n  \"recordedAt\": \"2025-04-11T10:00:00.000Z\",\n  \"locationId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_weather_with_new_location",
+      "parentId": "fld_weather_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/weather",
+      "name": "Create Weather Data With New Location",
+      "description": "Add new weather data with new location",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"temperature\": 82.3,\n  \"recordedAt\": \"2025-04-11T12:00:00.000Z\",\n  \"location\": {\n    \"city\": \"New City\",\n    \"state\": \"NS\",\n    \"zipCode\": \"12345\",\n    \"country\": \"USA\"\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029650000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_weather",
+      "parentId": "fld_weather_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/weather/1",
+      "name": "Delete Weather Data",
+      "description": "Delete weather data by ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1713029600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_location_endpoints",
+      "parentId": "fld_weather_api",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "name": "Location Endpoints",
+      "description": "Location data endpoints",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1713029700000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_all_locations",
+      "parentId": "fld_location_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/locations",
+      "name": "Get All Locations",
+      "description": "Get all locations",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_location_by_id",
+      "parentId": "fld_location_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/locations/1",
+      "name": "Get Location By ID",
+      "description": "Get location by ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_location_weather",
+      "parentId": "fld_location_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/locations/1/weather",
+      "name": "Get Weather for Location",
+      "description": "Get weather data for a specific location",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_location",
+      "parentId": "fld_location_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/locations",
+      "name": "Create Location",
+      "description": "Add a new location",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"city\": \"Minneapolis\",\n  \"state\": \"MN\",\n  \"zipCode\": \"55403\",\n  \"country\": \"USA\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1713029600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_location",
+      "parentId": "fld_location_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/locations/1",
+      "name": "Delete Location",
+      "description": "Delete location by ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [
+        {
+          "name": "cascade",
+          "value": "false",
+          "description": "Set to true to cascade delete related weather data"
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1713029500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_location_cascade",
+      "parentId": "fld_location_endpoints",
+      "modified": 1713030000000,
+      "created": 1713030000000,
+      "url": "http://localhost:5200/api/locations/1?cascade=true",
+      "name": "Delete Location with Cascade",
+      "description": "Delete location and all related weather data",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1713029450000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}
