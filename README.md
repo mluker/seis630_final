@@ -29,7 +29,7 @@ The Weather API allows you to:
 - **Average Temperature by Location**: See the average temperature for each city
 - **Hottest Locations**: Find the top 10 warmest cities based on average temperature
 - **Coldest Locations**: Find the top 10 coolest cities based on average temperature
-- **Temperature Trends**: Track how temperatures have changed over the past 7 days
+- **Temperature Trends**: Track how temperatures have changed over the past 60 days
 
 ## Project Structure
 
