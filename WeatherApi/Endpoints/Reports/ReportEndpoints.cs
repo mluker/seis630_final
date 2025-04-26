@@ -109,7 +109,7 @@ public static class ReportEndpoints
             });
         });
 
-        // Temperature trends over time (last 7 days)
+        // Temperature trends over time (last 60 days)
         app.MapGet("/api/reports/temperature-trends", async (WeatherDbContext db) =>
         {
             // Get current date
@@ -125,7 +125,7 @@ public static class ReportEndpoints
             // GROUP BY DATE(w.RecordedAt)
             // ORDER BY Date ASC
             var trends = await db.WeatherData
-                .Where(w => w.RecordedAt >= today.AddDays(-7))
+                .Where(w => w.RecordedAt >= today.AddDays(-60))
                 .GroupBy(w => w.RecordedAt.Date)
                 .Select(g => new
                 {
@@ -138,7 +138,7 @@ public static class ReportEndpoints
 
             return Results.Ok(new
             {
-                ReportName = "Daily Temperature Trends (Last 7 Days)",
+                ReportName = "Daily Temperature Trends (Last 60 Days)",
                 GeneratedAt = DateTime.UtcNow,
                 Data = trends
             });
