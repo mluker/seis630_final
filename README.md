@@ -60,12 +60,16 @@ This project was built using:
 - C# as the programming language
 - RESTful API design principles
 - Azure SQL
+- GitHub
 
 ## Class Project Information
 
 This project was developed for the SEIS630 Database Management Systems course at the University of St. Thomas. It demonstrates the practical application of database concepts including:
 - Entity-relationship modeling
-- SQL query generation (visible in code comments)
 - Database design and implementation
 - API development with database integration
+- Code first
+- Database migrations
+- ORM
 - Cloud databases
+- SQL query generation (visible in code comments)
